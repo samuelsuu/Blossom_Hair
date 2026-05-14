@@ -1,0 +1,303 @@
+/* ==========================================================================
+   BlossomMyHairs — Responsive Layouts
+   ========================================================================== */
+
+/* Large desktop adjustments */
+@media (max-width: 1180px) {
+    #navcon { gap: 30px; }
+    .gallery-grid { grid-template-rows: 260px 260px; }
+    .frame-tag { left: -32px; }
+    .hero-img-sub { width: 150px; height: 190px; right: -20px; }
+}
+
+/* Tablet — collapse nav, stack heroes */
+@media (max-width: 980px) {
+    :root {
+        --gutter: 5vw;
+        --section-pad: clamp(70px, 10vw, 110px);
+    }
+
+    /* Nav */
+    #navcon { display: none; }
+    .nav-cta { display: none; }
+    #hamburgerCon { display: flex; }
+
+    /* Topbar */
+    .topbar-divider,
+    .topbar-left span:nth-child(3) { display: none; }
+    .topbar-left { font-size: 0.74rem; }
+    .topbar-left span:first-child {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: 60vw;
+    }
+
+    /* Hero stacks */
+    #hero_inner {
+        grid-template-columns: 1fr;
+        gap: 60px;
+        min-height: auto;
+    }
+    #hero_block1 { order: 1; text-align: left; }
+    #hero_block2 { order: 2; }
+    .hero-title { font-size: clamp(2.4rem, 8vw, 4rem); }
+    .hero-image-frame { max-width: 420px; margin: 0 auto; }
+    .frame-tag { display: none; }
+    .hero-img-sub { width: 130px; height: 170px; right: -10px; bottom: -20px; }
+    .hero-badge { top: -10px; left: -10px; padding: 12px 18px; }
+    .hero-stats { gap: 22px; }
+    .stat-num { font-size: 2rem; }
+
+    /* About stacks */
+    #about_inner { grid-template-columns: 1fr; gap: 70px; }
+    .about-images { max-width: 540px; margin: 0 auto; width: 100%; }
+    .about-quote { width: 50%; padding: 18px 20px; }
+    .about-points { grid-template-columns: 1fr 1fr; gap: 16px; }
+
+    /* Process — 2x2 grid */
+    .process-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px 30px;
+    }
+    .process-grid::before { display: none; }
+
+    /* Why us stacks */
+    #why-us-inner { grid-template-columns: 1fr; gap: 70px; }
+    .why-image-wrap { max-width: 520px; margin: 0 auto; width: 100%; }
+    .why-image { aspect-ratio: 16 / 11; }
+
+    /* Gallery — 2 col mosaic */
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 220px);
+        gap: 14px;
+    }
+    .gallery-item.g1 { grid-column: span 2; grid-row: span 2; }
+    .gallery-item.g2 { grid-column: span 2; grid-row: span 1; }
+    .gallery-item.g3,
+    .gallery-item.g4 { grid-column: span 1; grid-row: span 1; }
+    .gallery-item.g5,
+    .gallery-item.g6 { display: none; }
+
+    /* Contact stacks */
+    #contact_inner { grid-template-columns: 1fr; gap: 50px; }
+    .contact-map { transform: translateY(20%); }
+
+    /* CTA banner — disable parallax for mobile perf */
+    .cta-bg { background-attachment: scroll; }
+
+    /* Footer */
+    .footer-inner {
+        grid-template-columns: 1fr 1fr;
+        gap: 50px 40px;
+    }
+}
+
+/* Small tablets / large phones */
+@media (max-width: 720px) {
+    body { font-size: 15.5px; }
+
+    .topbar { padding: 9px var(--gutter); font-size: 0.72rem; }
+    .topbar-right { gap: 14px; font-size: 0.9rem; }
+
+    nav { padding: 16px var(--gutter); }
+    .logo-mark { width: 52px; height: 52px; border-radius: 12px; }
+    .logo-name { font-size: 1.1rem; }
+    .logo-tag { font-size: 0.6rem; }
+    .footer-logo-img { width: 170px; height: 170px; border-radius: 18px; }
+
+    /* Mobile menu — fine-tuning */
+    .menu-nav a { gap: 18px; padding: 16px 4px; }
+    .m-text { font-size: clamp(1.55rem, 7vw, 2rem); }
+
+    /* Hero */
+    .hero-title { line-height: 1.05; }
+    .hero-title .title-sub { font-size: 0.55em; margin-top: 12px; }
+    .hero-cta-group { flex-direction: column; align-items: stretch; gap: 16px; }
+    .hero-cta-group .btn { width: 100%; }
+    .btn-link { justify-content: center; }
+    .btn { padding: 14px 26px; font-size: 0.86rem; }
+
+    .hero-stats { gap: 14px; padding-top: 28px; }
+    .stat-num { font-size: 1.7rem; }
+    .stat-plus { font-size: 1rem; }
+    .stat-label { font-size: 0.72rem; margin-top: 8px; }
+    .stat-divider { display: none; }
+    .stat { padding: 0 4px; }
+
+    .hero-marquee { padding: 22px 0; margin-top: 90px; }
+    .marquee-track { font-size: 1.3rem; gap: 32px; }
+
+    /* About */
+    .about-quote { width: 60%; right: 0; }
+    .about-quote p { font-size: 0.9rem; }
+    .about-lead { font-size: 1.3rem; }
+    .about-points { grid-template-columns: 1fr; gap: 16px; }
+    .about-cta { flex-direction: column; align-items: flex-start; gap: 22px; }
+
+    /* Services */
+    #services_inner { grid-template-columns: 1fr; gap: 20px; }
+
+    /* Process */
+    .process-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+    .process-step { padding: 0; }
+
+    /* Why us */
+    .why-list li { padding: 16px; gap: 14px; }
+    .why-ico { width: 44px; height: 44px; font-size: 1rem; }
+    .why-overlay { padding: 18px 22px; bottom: -28px; left: 14px; }
+    .overlay-num { font-size: 2rem; }
+
+    /* Gallery */
+    .gallery-grid {
+        grid-template-rows: repeat(3, 200px);
+        gap: 12px;
+    }
+    .gallery-item.g1 { grid-column: span 2; grid-row: span 1; }
+    .gallery-item.g2 { grid-column: span 2; grid-row: span 1; }
+    .gallery-item.g3,
+    .gallery-item.g4 { grid-column: span 1; grid-row: span 1; }
+    .gallery-overlay { padding: 18px; }
+    .gallery-title { font-size: 1.2rem; }
+
+    /* Testimonials */
+    .testimonial-grid { grid-template-columns: 1fr; gap: 20px; }
+    .testimonial-card { padding: 36px 28px 28px; }
+    .testimonial-card::before { font-size: 5.5rem; top: -8px; }
+
+    /* CTA banner */
+    .cta-actions { flex-direction: column; align-items: stretch; }
+    .cta-actions .btn { width: 100%; }
+
+    /* Form */
+    .contact-form-wrap { padding: 36px 26px; }
+    .form-row { grid-template-columns: 1fr; gap: 0; }
+    .contact-form h3 { font-size: 1.55rem; }
+    .contact-map iframe { height: 300px; }
+
+    /* Footer */
+    .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding-bottom: 40px;
+    }
+    #footer { padding-top: 200px; }
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 0.78rem;
+    }
+
+    .whatsapp-float { width: 54px; height: 54px; bottom: 20px; right: 20px; font-size: 1.5rem; }
+    .whatsapp-tooltip { display: none; }
+    #scrollTopBtn { width: 44px; height: 44px; bottom: 86px; right: 24px; font-size: 0.85rem; }
+}
+
+/* Very small phones */
+@media (max-width: 420px) {
+    :root { --gutter: 5%; }
+
+    .topbar-left span:first-child {
+        max-width: 65vw;
+    }
+    .topbar-right a { font-size: 1rem; }
+
+    .hero-eyebrow { font-size: 0.66rem; letter-spacing: 0.24em; }
+    .hero-eyebrow .orn { width: 36px; }
+    .hero-title { font-size: clamp(2.1rem, 10vw, 2.8rem); }
+    .hero-sub { font-size: 0.96rem; }
+
+    .hero-image-frame { max-width: 100%; }
+    .hero-img-sub { width: 110px; height: 140px; }
+
+    .hero-badge { padding: 10px 14px; }
+    .hero-badge strong { font-size: 0.92rem; }
+    .hero-badge span { font-size: 0.7rem; }
+
+    .stat-num { font-size: 1.5rem; }
+    .stat-label { font-size: 0.68rem; letter-spacing: 0.02em; }
+
+    .m-text { font-size: clamp(1.4rem, 7.5vw, 1.85rem); }
+    .menu-brand-name { font-size: 1rem; }
+    .menu-brand img { width: 42px; height: 42px; border-radius: 10px; }
+    .menu-cta { padding: 15px 22px; font-size: 0.86rem; }
+    .menu-quick { padding: 12px 14px; }
+    .mq-icon { width: 36px; height: 36px; font-size: 0.92rem; }
+    .menu-quick strong { font-size: 0.92rem; }
+    #menu_wrapper { padding: 0 18px; }
+
+    .section-title { font-size: 1.9rem; }
+
+    .about-quote { width: 70%; }
+
+    .serbox-body { padding: 26px 24px 28px; }
+    .serbox h3 { font-size: 1.2rem; }
+
+    .step-icon { width: 72px; height: 72px; font-size: 1.3rem; }
+    .process-step h4 { font-size: 1.15rem; }
+
+    .testimonial-card { padding: 32px 22px 24px; }
+    .t-text { font-size: 1rem; }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 220px);
+    }
+    .gallery-item.g1,
+    .gallery-item.g2,
+    .gallery-item.g3 { grid-column: span 1; grid-row: span 1; }
+    .gallery-item.g4 { display: none; }
+}
+
+/* Hide editorial extras on tablet down */
+@media (max-width: 980px) {
+    .hero-vertical-tag { display: none; }
+    .hero-scroll { display: none; }
+    .testimonial-grid-2 { grid-template-columns: 1fr; }
+    .pq-mark { top: -40px; font-size: 6rem; }
+    .pq-author { flex-wrap: wrap; justify-content: center; }
+    .eyebrow-num { font-size: 0.66rem; padding: 3px 8px; }
+
+    /* Showcase tweaks */
+    .showcase-frame { aspect-ratio: 16 / 10; }
+    .showcase-controls { gap: 12px; padding: 10px 12px; }
+    .vc-btn { width: 34px; height: 34px; font-size: 0.78rem; }
+    .vc-info { display: none; } /* keep controls compact */
+    .showcase-bigplay { width: 76px; height: 76px; font-size: 1.4rem; }
+    .gv-badge { top: 12px; left: 12px; padding: 4px 9px; font-size: 0.58rem; }
+}
+@media (max-width: 720px) {
+    .t-feature { padding: 40px 24px 44px; }
+    .t-feature-quote { font-size: 1.3rem; }
+    #pull-quote blockquote br { display: none; }
+    #pull-quote { padding-top: 100px; padding-bottom: 100px; }
+    .pq-mark { font-size: 4.5rem; top: -28px; }
+
+    /* Showcase mobile — taller frame for portrait videos */
+    .showcase-frame { aspect-ratio: 4 / 5; }
+    .showcase-corner { top: 14px; left: 14px; padding: 5px 11px; font-size: 0.62rem; }
+    .showcase-controls { left: 12px; right: 12px; bottom: 12px; }
+    .showcase-bigplay { width: 64px; height: 64px; font-size: 1.2rem; }
+    .vc-progress { min-width: 40px; }
+
+    /* Preloader mobile */
+    .pre-logo { width: 88px; height: 88px; border-radius: 18px; }
+    .pre-bar { width: 140px; }
+    .pre-tag { font-size: 0.62rem; letter-spacing: 0.24em; }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    .marquee-track { animation: none; }
+    .cta-bg { background-attachment: scroll; }
+}
