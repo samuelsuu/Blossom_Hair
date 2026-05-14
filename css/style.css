@@ -63,7 +63,10 @@
     list-style: none;
 }
 
-html { scroll-behavior: smooth; }
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
 
 body {
     font-family: var(--font-sans);
@@ -75,6 +78,8 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
+    width: 100%;
+    position: relative;
 }
 
 img { max-width: 100%; display: block; }
@@ -897,51 +902,6 @@ nav {
     border-radius: 250px 250px 28px 28px;
     z-index: 1;
 }
-.frame-tag {
-    position: absolute;
-    top: 40%;
-    left: -40px;
-    transform: translateY(-50%) rotate(-90deg);
-    transform-origin: 0 0;
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    font-size: 0.7rem;
-    letter-spacing: 0.32em;
-    text-transform: uppercase;
-    color: var(--c-muted);
-    z-index: 4;
-    white-space: nowrap;
-}
-.frame-tag-name { color: var(--c-plum); font-weight: 600; }
-.frame-tag-line {
-    display: inline-block;
-    width: 30px;
-    height: 1px;
-    background: var(--c-gold);
-}
-
-.hero-badge {
-    position: absolute;
-    top: -20px;
-    left: -30px;
-    background: var(--c-cream);
-    border-radius: 14px;
-    padding: 16px 22px;
-    box-shadow: var(--shadow);
-    z-index: 4;
-    border: 1px solid var(--c-line);
-}
-.badge-stars { color: var(--c-gold); font-size: 0.78rem; display: flex; gap: 3px; margin-bottom: 8px; }
-.hero-badge strong {
-    display: block;
-    color: var(--c-ink);
-    font-family: var(--font-display);
-    font-size: 1.05rem;
-    margin-bottom: 2px;
-}
-.hero-badge span { font-size: 0.75rem; color: var(--c-muted); }
-
 /* Hero marquee */
 .hero-marquee {
     margin-top: 110px;

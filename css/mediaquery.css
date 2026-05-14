@@ -6,7 +6,6 @@
 @media (max-width: 1180px) {
     #navcon { gap: 30px; }
     .gallery-grid { grid-template-rows: 260px 260px; }
-    .frame-tag { left: -32px; }
     .hero-img-sub { width: 150px; height: 190px; right: -20px; }
 }
 
@@ -43,9 +42,8 @@
     #hero_block2 { order: 2; }
     .hero-title { font-size: clamp(2.4rem, 8vw, 4rem); }
     .hero-image-frame { max-width: 420px; margin: 0 auto; }
-    .frame-tag { display: none; }
-    .hero-img-sub { width: 130px; height: 170px; right: -10px; bottom: -20px; }
-    .hero-badge { top: -10px; left: -10px; padding: 12px 18px; }
+    .frame-arc { inset: 14px 0 -14px 0; } /* keep arc within viewport */
+    .hero-img-sub { width: 130px; height: 130px; right: 0; bottom: -16px; }
     .hero-stats { gap: 22px; }
     .stat-num { font-size: 2rem; }
 
@@ -67,18 +65,18 @@
     .why-image-wrap { max-width: 520px; margin: 0 auto; width: 100%; }
     .why-image { aspect-ratio: 16 / 11; }
 
-    /* Gallery — 2 col mosaic */
+    /* Gallery — 2 col mosaic (shows all 6 tiles) */
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(4, 220px);
+        grid-template-rows: repeat(5, 220px);
         gap: 14px;
     }
     .gallery-item.g1 { grid-column: span 2; grid-row: span 2; }
-    .gallery-item.g2 { grid-column: span 2; grid-row: span 1; }
-    .gallery-item.g3,
+    .gallery-item.g2 { grid-column: span 1; grid-row: span 1; }
+    .gallery-item.g3 { grid-column: span 1; grid-row: span 1; }
     .gallery-item.g4 { grid-column: span 1; grid-row: span 1; }
-    .gallery-item.g5,
-    .gallery-item.g6 { display: none; }
+    .gallery-item.g5 { grid-column: span 1; grid-row: span 1; }
+    .gallery-item.g6 { grid-column: span 2; grid-row: span 1; display: block; }
 
     /* Contact stacks */
     #contact_inner { grid-template-columns: 1fr; gap: 50px; }
@@ -149,20 +147,24 @@
     /* Why us */
     .why-list li { padding: 16px; gap: 14px; }
     .why-ico { width: 44px; height: 44px; font-size: 1rem; }
-    .why-overlay { padding: 18px 22px; bottom: -28px; left: 14px; }
+    .why-overlay { padding: 18px 22px; bottom: -28px; left: 0; }
+    .why-floral { top: -16px; right: 0; width: 60px; height: 60px; }
     .overlay-num { font-size: 2rem; }
 
-    /* Gallery */
+    /* Gallery — phones (all 6 tiles) */
     .gallery-grid {
-        grid-template-rows: repeat(3, 200px);
-        gap: 12px;
+        grid-template-rows: repeat(5, 180px);
+        gap: 10px;
     }
-    .gallery-item.g1 { grid-column: span 2; grid-row: span 1; }
-    .gallery-item.g2 { grid-column: span 2; grid-row: span 1; }
-    .gallery-item.g3,
+    .gallery-item.g1 { grid-column: span 2; grid-row: span 2; }
+    .gallery-item.g2 { grid-column: span 1; grid-row: span 1; }
+    .gallery-item.g3 { grid-column: span 1; grid-row: span 1; }
     .gallery-item.g4 { grid-column: span 1; grid-row: span 1; }
-    .gallery-overlay { padding: 18px; }
-    .gallery-title { font-size: 1.2rem; }
+    .gallery-item.g5 { grid-column: span 1; grid-row: span 1; }
+    .gallery-item.g6 { grid-column: span 2; grid-row: span 1; display: block; }
+    .gallery-overlay { padding: 16px; }
+    .gallery-title { font-size: 1.15rem; }
+    .gv-badge { top: 12px; left: 12px; padding: 4px 9px; font-size: 0.58rem; }
 
     /* Testimonials */
     .testimonial-grid { grid-template-columns: 1fr; gap: 20px; }
@@ -212,11 +214,8 @@
     .hero-sub { font-size: 0.96rem; }
 
     .hero-image-frame { max-width: 100%; }
-    .hero-img-sub { width: 110px; height: 140px; }
-
-    .hero-badge { padding: 10px 14px; }
-    .hero-badge strong { font-size: 0.92rem; }
-    .hero-badge span { font-size: 0.7rem; }
+    .hero-img-sub { width: 100px; height: 100px; right: 0; bottom: -10px; border-width: 5px; }
+    .frame-arc { inset: 12px 0 -12px 0; }
 
     .stat-num { font-size: 1.5rem; }
     .stat-label { font-size: 0.68rem; letter-spacing: 0.02em; }
@@ -245,12 +244,15 @@
 
     .gallery-grid {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 220px);
+        grid-template-rows: repeat(6, 200px);
+        gap: 10px;
     }
     .gallery-item.g1,
     .gallery-item.g2,
-    .gallery-item.g3 { grid-column: span 1; grid-row: span 1; }
-    .gallery-item.g4 { display: none; }
+    .gallery-item.g3,
+    .gallery-item.g4,
+    .gallery-item.g5,
+    .gallery-item.g6 { grid-column: span 1; grid-row: span 1; display: block; }
 }
 
 /* Hide editorial extras on tablet down */
@@ -288,6 +290,19 @@
     .pre-logo { width: 88px; height: 88px; border-radius: 18px; }
     .pre-bar { width: 140px; }
     .pre-tag { font-size: 0.62rem; letter-spacing: 0.24em; }
+}
+
+/* ================================================================
+   Mobile safety net — guarantee AOS-managed elements are always visible
+   even if AOS fails to trigger (some mobile browsers don't fire scroll
+   triggers reliably on data-aos items)
+   ================================================================ */
+@media (max-width: 768px) {
+    [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+        visibility: visible !important;
+    }
 }
 
 /* Reduced motion */

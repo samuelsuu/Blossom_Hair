@@ -11,14 +11,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="preload" as="image" href="img/work-1.jpeg" fetchpriority="high">
+    <link rel="preload" as="image" href="img/blossom-logo.jpeg">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/mediaquery.css">
 
-    <link rel="icon" type="image/png" href="img/blossom-logo.png">
-    <link rel="apple-touch-icon" href="img/blossom-logo.png">
+    <link rel="icon" type="image/jpeg" href="img/blossom-logo.jpeg">
+    <link rel="apple-touch-icon" href="img/blossom-logo.jpeg">
 
     <title>BlossomMyHairs — Ladies' Hair Atelier | Wigs, Installations & Bridal Styling in Lagos</title>
 </head>
@@ -27,7 +31,7 @@
     <!-- Premium UX layer: preloader + scroll progress + custom cursor -->
     <div class="preloader" id="preloader" aria-hidden="true">
         <div class="pre-logo">
-            <img src="img/blossom-logo.jpeg" alt="">
+            <img src="img/blossom-logo.jpeg" alt="" fetchpriority="high" decoding="async">
         </div>
         <div class="pre-bar"><span></span></div>
         <span class="pre-tag">Ladies' Hair Atelier · Sangotedo</span>
@@ -72,7 +76,7 @@
 
         <header class="menu-header">
             <a href="#home" class="menu-brand" id="menuBrandClose">
-                <img src="img/blossom-logo.jpeg" alt="">
+                <img src="img/blossom-logo.jpeg" alt="BlossomMyHairs" loading="lazy" decoding="async">
                 <div>
                     <span class="menu-brand-name">BlossomMyHairs</span>
                     <span class="menu-brand-tag">Ladies' Hair Atelier</span>
@@ -236,8 +240,8 @@
             <div id="hero_block2">
                 <div class="hero-image-frame">
                     <div class="frame-arc"></div>
-                    <img class="hero-img-main" src="img/work-1.jpeg" alt="A signature BlossomMyHairs installation">
-                    <img class="hero-img-sub" src="img/blossom-logo.jpeg" alt="BlossomMyHairs brand mark">
+                    <img class="hero-img-main" src="img/work-1.jpeg" alt="A signature BlossomMyHairs installation" fetchpriority="high" decoding="async">
+                    <img class="hero-img-sub" src="img/blossom-logo.jpeg" alt="BlossomMyHairs brand mark" decoding="async">
                 </div>
             </div>
         </article>
@@ -274,10 +278,10 @@
         <article id="about_inner">
             <div class="about-images" data-aos="fade-right">
                 <div class="img-stack-1">
-                    <img src="img/work-3.jpeg" alt="Stylist crafting a beautiful look">
+                    <img src="img/work-3.jpeg" alt="Stylist crafting a beautiful look" loading="lazy" decoding="async">
                 </div>
                 <div class="img-stack-2">
-                    <img src="img/work-2.jpeg" alt="Salon ambience">
+                    <img src="img/work-2.jpeg" alt="Salon ambience" loading="lazy" decoding="async">
                 </div>
                 <div class="about-quote">
                     <i class="fa-solid fa-quote-left"></i>
@@ -352,7 +356,7 @@
         <article id="services_inner">
             <div class="serbox" data-aos="fade-up">
                 <div class="serbox-image">
-                    <img src="img/work-1.jpeg" alt="">
+                    <img src="img/work-1.jpeg" alt="BlossomMyHairs styling work" loading="lazy" decoding="async">
                 </div>
                 <div class="serbox-body">
                     <span class="serbox-num">01</span>
@@ -364,7 +368,7 @@
 
             <div class="serbox" data-aos="fade-up" data-aos-delay="60">
                 <div class="serbox-image">
-                    <img src="img/work-3.jpeg" alt="">
+                    <img src="img/work-3.jpeg" alt="BlossomMyHairs installation" loading="lazy" decoding="async">
                 </div>
                 <div class="serbox-body">
                     <span class="serbox-num">02</span>
@@ -376,7 +380,7 @@
 
             <div class="serbox" data-aos="fade-up" data-aos-delay="120">
                 <div class="serbox-image">
-                    <img src="img/work-2.jpeg" alt="">
+                    <img src="img/work-2.jpeg" alt="BlossomMyHairs studio" loading="lazy" decoding="async">
                 </div>
                 <div class="serbox-body">
                     <span class="serbox-num">03</span>
@@ -388,7 +392,7 @@
 
             <div class="serbox" data-aos="fade-up">
                 <div class="serbox-image">
-                    <img src="img/work-1.jpeg" alt="">
+                    <img src="img/work-1.jpeg" alt="BlossomMyHairs styling work" loading="lazy" decoding="async">
                 </div>
                 <div class="serbox-body">
                     <span class="serbox-num">04</span>
@@ -400,7 +404,7 @@
 
             <div class="serbox" data-aos="fade-up" data-aos-delay="60">
                 <div class="serbox-image">
-                    <img src="img/work-1.jpeg" alt="">
+                    <img src="img/work-1.jpeg" alt="BlossomMyHairs styling work" loading="lazy" decoding="async">
                 </div>
                 <div class="serbox-body">
                     <span class="serbox-num">05</span>
@@ -412,7 +416,7 @@
 
             <div class="serbox" data-aos="fade-up" data-aos-delay="120">
                 <div class="serbox-image">
-                    <img src="img/work-2.jpeg" alt="">
+                    <img src="img/work-2.jpeg" alt="BlossomMyHairs studio" loading="lazy" decoding="async">
                 </div>
                 <div class="serbox-body">
                     <span class="serbox-num">06</span>
@@ -424,7 +428,7 @@
 
             <div class="serbox" data-aos="fade-up">
                 <div class="serbox-image">
-                    <img src="img/work-2.jpeg" alt="">
+                    <img src="img/work-2.jpeg" alt="BlossomMyHairs studio" loading="lazy" decoding="async">
                 </div>
                 <div class="serbox-body">
                     <span class="serbox-num">07</span>
@@ -436,7 +440,7 @@
 
             <div class="serbox" data-aos="fade-up" data-aos-delay="60">
                 <div class="serbox-image">
-                    <img src="img/work-2.jpeg" alt="">
+                    <img src="img/work-2.jpeg" alt="BlossomMyHairs studio" loading="lazy" decoding="async">
                 </div>
                 <div class="serbox-body">
                     <span class="serbox-num">08</span>
@@ -448,7 +452,7 @@
 
             <div class="serbox" data-aos="fade-up" data-aos-delay="120">
                 <div class="serbox-image">
-                    <img src="img/work-1.jpeg" alt="">
+                    <img src="img/work-1.jpeg" alt="BlossomMyHairs styling work" loading="lazy" decoding="async">
                 </div>
                 <div class="serbox-body">
                     <span class="serbox-num">09</span>
@@ -460,7 +464,7 @@
 
             <div class="serbox serbox-featured" data-aos="fade-up">
                 <div class="serbox-image">
-                    <img src="img/work-3.jpeg" alt="">
+                    <img src="img/work-3.jpeg" alt="BlossomMyHairs installation" loading="lazy" decoding="async">
                 </div>
                 <div class="serbox-body">
                     <span class="serbox-num">10</span>
@@ -567,7 +571,7 @@
             </div>
             <div class="why-image-wrap" data-aos="fade-left">
                 <div class="why-image">
-                    <img src="img/work-2.jpeg" alt="Inside the BlossomMyHairs atelier">
+                    <img src="img/work-2.jpeg" alt="Inside the BlossomMyHairs atelier" loading="lazy" decoding="async">
                 </div>
                 <div class="why-overlay">
                     <span class="overlay-num">98<small>%</small></span>
@@ -684,25 +688,25 @@
                 </span>
             </a>
             <a class="gallery-item g2" data-aos="zoom-in" data-aos-delay="60" href="#contact">
-                <img src="img/work-2.jpeg" alt="">
+                <img src="img/work-2.jpeg" alt="BlossomMyHairs studio" loading="lazy" decoding="async">
                 <span class="gallery-overlay">
                     <span class="gallery-title">Custom Wig</span>
                 </span>
             </a>
             <a class="gallery-item g3" data-aos="zoom-in" data-aos-delay="120" href="#contact">
-                <img src="img/work-2.jpeg" alt="">
+                <img src="img/work-2.jpeg" alt="BlossomMyHairs studio" loading="lazy" decoding="async">
                 <span class="gallery-overlay">
                     <span class="gallery-title">Hair Colouring</span>
                 </span>
             </a>
             <a class="gallery-item g4" data-aos="zoom-in" data-aos-delay="180" href="#contact">
-                <img src="img/work-3.jpeg" alt="">
+                <img src="img/work-3.jpeg" alt="BlossomMyHairs installation" loading="lazy" decoding="async">
                 <span class="gallery-overlay">
                     <span class="gallery-title">Laying & Styling</span>
                 </span>
             </a>
             <a class="gallery-item g5" data-aos="zoom-in" data-aos-delay="60" href="#contact">
-                <img src="img/work-3.jpeg" alt="">
+                <img src="img/work-3.jpeg" alt="BlossomMyHairs installation" loading="lazy" decoding="async">
                 <span class="gallery-overlay">
                     <span class="gallery-title">Bridal Styling</span>
                 </span>
@@ -935,7 +939,7 @@
         <div class="footer-inner">
             <div class="footer-col footer-brand">
                 <a href="#home" class="footer-logo" aria-label="BlossomMyHairs home">
-                    <img src="img/blossom-logo.jpeg" alt="BlossomMyHairs — Ladies' Hair Atelier" class="footer-logo-img">
+                    <img src="img/blossom-logo.jpeg" alt="BlossomMyHairs — Ladies' Hair Atelier" class="footer-logo-img" loading="lazy" decoding="async">
                 </a>
                 <p>Where every woman blossoms into her most radiant self. A ladies' hair atelier in the heart of
                     Sangotedo, Lagos — crafting beauty since 2019.</p>
@@ -991,7 +995,13 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ duration: 900, once: true, easing: 'ease-out-cubic', offset: 80 });
+        AOS.init({
+            duration: 800,
+            once: true,
+            easing: 'ease-out-cubic',
+            offset: 60,
+            disable: () => window.matchMedia('(max-width: 768px)').matches
+        });
         document.getElementById('year').textContent = new Date().getFullYear();
 
         // Mobile menu toggle
